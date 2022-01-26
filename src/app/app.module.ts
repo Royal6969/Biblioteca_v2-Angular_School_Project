@@ -5,10 +5,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { BookListComponent } from './components/book-list/book-list.component';
-import { BookDetailsComponent } from './components/book-details/book-details.component';
-import { AddBookComponent } from './components/add-book/add-book.component';
-import { DeleteBookComponent } from './components/delete-book/delete-book.component';
+import { BookListComponent } from './Books/book-list/book-list.component';
+import { BookDetailsComponent } from './Books/book-details/book-details.component';
+import { AddBookComponent } from './Books/add-book/add-book.component';
+import { DeleteBookComponent } from './Books/delete-book/delete-book.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 
@@ -25,18 +25,18 @@ import { AngularMaterialModule } from './modules/angular-material.module';
 import { RealTimeDBService } from './services/real-time-db.service';
 import { FirestoreService } from './services/firestore.service';
 
-import { AddBookRtdbComponent } from './components/add-book-rtdb/add-book-rtdb.component';
-import { AddBookFireComponent } from './components/add-book-fire/add-book-fire.component';
-import { EditBookFireComponent } from './components/edit-book-fire/edit-book-fire.component';
-import { EditBookRtdbComponent } from './components/edit-book-rtdb/edit-book-rtdb.component';
-import { DeleteBookFireComponent } from './components/delete-book-fire/delete-book-fire.component';
+import { AddBookRtdbComponent } from './Books/add-book-rtdb/add-book-rtdb.component';
+import { AddBookFireComponent } from './Books/add-book-fire/add-book-fire.component';
+import { EditBookFireComponent } from './Books/edit-book-fire/edit-book-fire.component';
+import { EditBookRtdbComponent } from './Books/edit-book-rtdb/edit-book-rtdb.component';
+import { DeleteBookFireComponent } from './Books/delete-book-fire/delete-book-fire.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ClientesV2Component } from './components/clientes-v2/clientes-v2.component';
-import { AddCustomerComponent } from './components/add-customer/add-customer.component';
-import { EditCustomerComponent } from './components/edit-customer/edit-customer.component';
-import { CustomerDetailsComponent } from './components/customer-details/customer-details.component';
-import { DeleteCustomerComponent } from './components/delete-customer/delete-customer.component';
+import { ClientesV2Component } from './Customers/clientes-v2/clientes-v2.component';
+import { AddCustomerComponent } from './Customers/add-customer/add-customer.component';
+import { EditCustomerComponent } from './Customers/edit-customer/edit-customer.component';
+import { CustomerDetailsComponent } from './Customers/customer-details/customer-details.component';
+import { DeleteCustomerComponent } from './Customers/delete-customer/delete-customer.component';
 
 // import { SETTINGS as AUTH_SETTINGS } from '@angular/fire/compat/auth';
 // import { LANGUAGE_CODE } from '@angular/fire/compat/auth';
@@ -46,8 +46,8 @@ import { DeleteCustomerComponent } from './components/delete-customer/delete-cus
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { PanelControlComponent } from './components/panel-control/panel-control.component';
-import { ListaPrestamosComponent } from './components/lista-prestamos/lista-prestamos.component';
-import { CrearPrestamoFireComponent } from './components/crear-prestamo-fire/crear-prestamo-fire.component';
+import { ListaPrestamosComponent } from './Bookings/lista-prestamos/lista-prestamos.component';
+import { CrearPrestamoFireComponent } from './Bookings/crear-prestamo-fire/crear-prestamo-fire.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 

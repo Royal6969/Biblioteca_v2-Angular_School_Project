@@ -7,7 +7,7 @@ import { RealTimeDBService } from 'src/app/services/real-time-db.service';
 @Component({
   selector: 'app-add-book-rtdb',
   templateUrl: './add-book-rtdb.component.html',
-  styleUrls: ['./add-book-rtdb.component.css']
+  styleUrls: ['./add-book-rtdb.component.scss']
 })
 export class AddBookRtdbComponent implements OnInit {
 

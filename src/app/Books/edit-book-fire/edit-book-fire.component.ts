@@ -6,7 +6,7 @@ import { FirestoreService } from 'src/app/services/firestore.service';
 @Component({
   selector: 'app-edit-book-fire',
   templateUrl: './edit-book-fire.component.html',
-  styleUrls: ['./edit-book-fire.component.css']
+  styleUrls: ['./edit-book-fire.component.scss']
 })
 export class EditBookFireComponent implements OnInit {
 

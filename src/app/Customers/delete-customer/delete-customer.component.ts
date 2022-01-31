@@ -5,7 +5,7 @@ import { ClientesService } from 'src/app/services/clientes.service';
 @Component({
   selector: 'app-delete-customer',
   templateUrl: './delete-customer.component.html',
-  styleUrls: ['./delete-customer.component.css']
+  styleUrls: ['./delete-customer.component.scss']
 })
 export class DeleteCustomerComponent implements OnInit {
 

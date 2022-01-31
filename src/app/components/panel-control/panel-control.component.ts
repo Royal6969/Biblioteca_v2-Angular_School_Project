@@ -5,7 +5,7 @@ import { RegisterService } from 'src/app/services/register.service';
 @Component({
   selector: 'app-panel-control',
   templateUrl: './panel-control.component.html',
-  styleUrls: ['./panel-control.component.css']
+  styleUrls: ['./panel-control.component.scss']
 })
 export class PanelControlComponent implements OnInit {
 

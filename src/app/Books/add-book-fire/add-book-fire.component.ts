@@ -9,7 +9,7 @@ import { Book } from 'src/app/interfaces/book';
 @Component({
   selector: 'app-add-book-fire',
   templateUrl: './add-book-fire.component.html',
-  styleUrls: ['./add-book-fire.component.css']
+  styleUrls: ['./add-book-fire.component.scss']
 })
 export class AddBookFireComponent implements OnInit {
 

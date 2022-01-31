@@ -5,7 +5,7 @@ import { FirestoreService } from 'src/app/services/firestore.service';
 @Component({
   selector: 'app-delete-book-fire',
   templateUrl: './delete-book-fire.component.html',
-  styleUrls: ['./delete-book-fire.component.css']
+  styleUrls: ['./delete-book-fire.component.scss']
 })
 export class DeleteBookFireComponent implements OnInit {
 

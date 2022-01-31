@@ -12,7 +12,7 @@ import { PrestamosService } from 'src/app/services/prestamos.service';
 @Component({
   selector: 'app-crear-prestamo-fire',
   templateUrl: './crear-prestamo-fire.component.html',
-  styleUrls: ['./crear-prestamo-fire.component.css']
+  styleUrls: ['./crear-prestamo-fire.component.scss']
 })
 export class CrearPrestamoFireComponent implements OnInit {
 

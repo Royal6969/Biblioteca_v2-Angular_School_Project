@@ -6,7 +6,7 @@ import { ClienteV2Service } from 'src/app/services/cliente-v2.service';
 @Component({
   selector: 'app-clientes-v2',
   templateUrl: './clientes-v2.component.html',
-  styleUrls: ['./clientes-v2.component.css']
+  styleUrls: ['./clientes-v2.component.scss']
 })
 export class ClientesV2Component implements OnInit {
 

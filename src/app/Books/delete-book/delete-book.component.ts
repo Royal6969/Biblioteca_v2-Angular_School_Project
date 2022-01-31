@@ -6,7 +6,7 @@ import { RealTimeDBService } from 'src/app/services/real-time-db.service';
 @Component({
   selector: 'app-delete-book',
   templateUrl: './delete-book.component.html',
-  styleUrls: ['./delete-book.component.css']
+  styleUrls: ['./delete-book.component.scss']
 })
 export class DeleteBookComponent implements OnInit {
 

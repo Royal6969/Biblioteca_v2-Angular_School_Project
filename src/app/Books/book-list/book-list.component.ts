@@ -4,9 +4,11 @@ import { map } from 'rxjs/operators';
 
 import { Book } from 'src/app/interfaces/book';
 import BookModel from 'src/app/models/book-model';
-import { FirestoreService } from 'src/app/services/firestore.service';
 
+import { FirestoreService } from 'src/app/services/firestore.service';
 import { RealTimeDBService } from 'src/app/services/real-time-db.service';
+
+import { EffectLoaderService } from 'src/app/services/effect-loader.service';
 
 @Component({
   selector: 'app-book-list',
@@ -27,12 +29,16 @@ export class BookListComponent implements OnInit {
   constructor(
     private realTimeDBService: RealTimeDBService,
     private firestoreService: FirestoreService,
-    private router: Router
+    private router: Router,
+
+    private effectLoaderService: EffectLoaderService
   ) { }
 
   ngOnInit(): void {
-    this.getAllBooks_v2(); // para obtener los libros de la RealTimeDB
+    this.effectLoaderService.cargarEfecto(['vanilla-tilt.min']);
+    this.effectLoaderService.cargarEfecto(['vanilla-tilt-conf']);
 
+    this.getAllBooks_v2(); // para obtener los libros de la RealTimeDB
     this.getAllBooks(); // para obtener los libros de Firestore
   }
 

@@ -51,6 +51,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
+import { EffectLoaderService } from './services/effect-loader.service';
+
 
 @NgModule({
   declarations: [
@@ -104,7 +106,9 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     AuthService,
     RegisterService,
     ClienteV2Service,
-    PrestamosService
+    PrestamosService,
+
+    EffectLoaderService
   ],
   bootstrap: [AppComponent]
 })

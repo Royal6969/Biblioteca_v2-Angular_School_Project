@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
-// import { Timestamp } from 'rxjs/internal/operators/timestamp'; // este precísamente es el que NO nos sirve para esto
 import { PrestamosService } from 'src/app/services/prestamos.service';
 import firebase from 'firebase/compat/app';
 import Timestamp = firebase.firestore.Timestamp;
@@ -34,7 +33,7 @@ export class ListaPrestamosComponent implements OnInit {
             id: bookingData.payload.doc.id
           });
         })
-        console.log(this.prestamos);
+        // console.log(this.prestamos);
       })
   }
 

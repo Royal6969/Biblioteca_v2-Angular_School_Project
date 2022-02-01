@@ -2,35 +2,49 @@
 
 <br>
 
-<div class="container">
-  <table class="table table-hover">
+<div class="superContainer">
 
-    <thead>
-      <tr class="table-secondary">
-        <th scope="col">cliente</th>
-        <th scope="col">libro</th>
-        <th scope="col">fecha préstamo</th>
-        <th scope="col">fecha devolución</th>
-      </tr>
-    </thead>
+  <section>
 
-    <tbody>
-      <tr *ngFor="let prestamo of prestamos" class="table-light">
-        <th scope="row">{{prestamo.data.customer_name}}</th>
-
-        <td>{{prestamo.data.book_title}}</td>
-
-        <td>{{prestamo.data.date_booking.toDate()}}</td>
-
-        <div *ngIf="prestamo.data.date_end_booking != null">
-          <td>{{prestamo.data.date_end_booking.toDate()}}</td>
+    <div class="box">
+      <h3>Lista de Préstamos</h3>
+      
+      <div class="list" *ngFor="let prestamo of prestamos">
+        <div class="imgBx">
+          <img src="{{prestamo.data.customer_url}}">
         </div>
 
-        <div *ngIf="prestamo.data.date_end_booking == null">
-          <td><button type="button"  (click)="finalizarPrestamo(prestamo)" class="btn btn-info m-1">Devolver</button></td>
-        </div>    
-      </tr>
-    </tbody>
-    
-  </table>
+        <div class="content">
+          <h2 class="rank"><small>#</small>1</h2>
+          <h4>{{prestamo.data.customer_name}}</h4>
+          <p>{{prestamo.data.customer_email}}</p>
+        </div>
+
+        <!-- ------------------------------------------- -->
+
+        <div class="imgBx2">
+          <img src="{{prestamo.data.book_imageUrl}}">
+        </div>
+
+        <div class="content2">
+          <h4>{{prestamo.data.book_title}}</h4>
+          <p>{{prestamo.data.book_author}}</p>
+        </div>
+
+        <!-- ------------------------------------------- -->
+
+        <div class="content3">
+          <h4>{{prestamo.data.date_booking.toDate()}}</h4>
+          <p *ngIf="prestamo.data.date_end_booking != null">
+            {{prestamo.data.date_end_booking.toDate()}}
+          </p>
+          <p *ngIf="prestamo.data.date_end_booking == null">
+            <button type="button" (click)="finalizarPrestamo(prestamo)" class="btn btn-info m-1">Devolver</button>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
 </div>

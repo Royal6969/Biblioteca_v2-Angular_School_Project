@@ -50,8 +50,6 @@ export class CrearPrestamoFireComponent implements OnInit {
     }
 
     this.getAllCustomers();
-
-
   }
 
   getAllCustomers(): void {
@@ -75,8 +73,12 @@ export class CrearPrestamoFireComponent implements OnInit {
       formData = this.bookingForm.value.customer;
       prestamo.customer_id = formData.id;
       prestamo.customer_name = formData.data.name;
+      prestamo.customer_url = formData.data.url;
+      prestamo.customer_email = formData.data.email;
       prestamo.book_id = this.book.id;
       prestamo.book_title = this.book.data.title;
+      prestamo.book_author = this.book.data.author;
+      prestamo.book_imageUrl = this.book.data.imageUrl;
       prestamo.date_booking = Timestamp.now();
 
       this.prestamoService.createPrestamo(prestamo);

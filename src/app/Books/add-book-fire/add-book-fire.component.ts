@@ -21,7 +21,7 @@ export class AddBookFireComponent implements OnInit {
     price: new FormControl('', Validators.required),
     description:new FormControl(''),
     rate: new FormControl(''),
-    imageUrl: new FormControl('', Validators.required)
+    imagePortada: new FormControl('', Validators.required)
   });
 
 

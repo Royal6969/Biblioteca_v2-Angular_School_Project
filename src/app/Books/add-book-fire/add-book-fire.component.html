@@ -18,26 +18,6 @@
             <input matInput placeholder="Book Price" type="number" name="price" id="price" required formControlName="price">
         </mat-form-field>
 
-        <table class="full-width" cellspacing="10px">
-            <tr>
-                <td>
-                    <mat-form-field class="full-width">
-                        <input matInput [matDatepicker]="dateadded" placeholder="Date Added" type="date" name="dateadded">
-                        <mat-datepicker-toggle matSuffix [for]="dateadded"></mat-datepicker-toggle>
-                    </mat-form-field>
-                    <mat-datepicker #dateadded></mat-datepicker>
-                </td>
-
-                <td>
-                    <mat-form-field class="full-width">
-                        <input matInput [matDatepicker]="dateread" placeholder="Date Read" type="date" name="dateread">
-                        <mat-datepicker-toggle matSuffix [for]="dateread"></mat-datepicker-toggle>
-                    </mat-form-field>
-                    <mat-datepicker #dateread></mat-datepicker>
-                </td>
-            </tr>
-        </table>
-
         <div>
             <mat-form-field class="full-width">
                 <textarea matInput name="description" id="description" rows="5" placeholder="Book Description" formControlName="description"></textarea>
@@ -49,15 +29,13 @@
         </div>
 
         <mat-form-field class="third-width">
-            <input matInput placeholder="Image URL (enter image URL)" type="url" name="imageUrl" id="imageUrl" required formControlName="imageUrl">
+            <input matInput placeholder="Image URL (enter image URL)" type="url" name="imagePortada" id="imagePortada" required formControlName="imagePortada">
         </mat-form-field>
-        
+        <br>
+
+        <!-- <img src="{{book.data.imagePortada}}"> -->
         <br>
         <hr>
-
-        <!-- <button style="margin-right: 30px" mat-raised-button color="warn" value="ngSubmit" [disabled]="!myForm.form.valid">
-            Create Book
-        </button> -->
 
         <button class="a" value="submit" [disabled]="!myForm.form.valid">Create Book</button>
 

@@ -37,7 +37,7 @@ export class EditBookRtdbComponent implements OnInit, OnChanges {
       price: new FormControl(this.book.price, Validators.required),
       description: new FormControl(this.book.description),
       rate: new FormControl(this.book.rate),
-      imageUrl: new FormControl(this.book.imageUrl, Validators.required)
+      imagePortada: new FormControl(this.book.imagePortada, Validators.required)
     })
   }
 

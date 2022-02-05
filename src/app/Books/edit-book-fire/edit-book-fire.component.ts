@@ -33,7 +33,7 @@ export class EditBookFireComponent implements OnInit {
       price: new FormControl(this.book.data.price, Validators.required),
       description: new FormControl(this.book.data.description),
       rate: new FormControl(this.book.data.rate),
-      imageUrl: new FormControl(this.book.data.imageUrl, Validators.required)
+      imagePortada: new FormControl(this.book.data.imagePortada, Validators.required)
     })
   }
 

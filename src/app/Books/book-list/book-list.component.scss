@@ -21,11 +21,6 @@
     transform-style: preserve-3d;
 }
 
-.book-img {
-    width: 350px;
-    height: 300px;
-}
-
 /******************** Vanilla Tilt *********************/
 .superContainer .box {
     position: relative;
@@ -76,7 +71,7 @@
     color: #fff;
     width: 100%;
     transform-style: preserve-3d;
-    transform: translate3d(0, 0, 75px);
+    transform: translate3d(0, 0, 100px);
     transition: 0.5s;
     opacity: 0;
     z-index: 10;
@@ -92,7 +87,7 @@
     bottom: 0;
     left: 50%;
     transform-style: preserve-3d;
-    transform: translate3d(-50%, 0, 75px);
+    transform: translate3d(-50%, 0, 100px);
     color: #fff;
     background: #333;
     padding: 10px 25px;
@@ -127,18 +122,16 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    //max-width: 300px;
-    min-width: 300px;
     transition: 0.5s;
     z-index: 11;
     transform-style: preserve-3d;
     transform: translate3d(-50%, -50%, 0px);
     width: 200px;
-    height: 200px;
+    height: 300px;
 }
 
 .superContainer .box:hover .product {
-    transform: translate3d(-50%, -50%, 100px);
+    transform: translate3d(-50%, -50%, 70px);
 }
 
 /******************** botones chulos ********************/

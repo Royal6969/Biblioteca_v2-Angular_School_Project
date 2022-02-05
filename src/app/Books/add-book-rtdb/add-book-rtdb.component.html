@@ -29,22 +29,23 @@
         </div>
 
         <mat-form-field class="third-width">
-            <input matInput placeholder="Image URL (enter image URL)" type="url" name="imageUrl" id="imageUrl"  required [(ngModel)]="book.imageUrl">
+            <input matInput placeholder="Image URL (enter image URL)" type="url" name="imagePortada" id="imagePortada"  required [(ngModel)]="book.imagePortada">
         </mat-form-field>
         <br>
 
-        <img src="{{book.imageUrl}}">
+        <img src="{{book.imagePortada}}">
         <br>
         <hr>
 
         <button class="a" (click)="saveBook()" [disabled]="!myForm.form.valid">Save Book</button>
         
-        <br><br>
+        <!-- <br>
+        <hr>
 
         <div *ngIf="submitted">
             <h4>You submitted successfully!</h4>
             <button class="a" (click)="newBook()" [disabled]="!myForm.form.valid">Add Book</button>        
-        </div>
+        </div> -->
 
         <br><br>
 

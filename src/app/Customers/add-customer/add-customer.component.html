@@ -2,52 +2,86 @@
 
 <mat-toolbar>Add a New Customer | Firestore</mat-toolbar>
 
-<div class="add-book-form">
-    <a [routerLink]="['/clientes-v2']">Back</a>
+<section>
+    <form class="superContainer" #myForm="ngForm" [formGroup]="customerForm" (ngSubmit)="createCustomer()">
+        <h2>Glassmorphing Contact Us Form</h2>
 
-    <form #myForm="ngForm" [formGroup]="customerForm" (ngSubmit)="createCustomer()">
-        <mat-form-field class="full-width">
-            <input matInput placeholder="Customer Name" name="name" id="name" required formControlName="name">
-        </mat-form-field>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" name="name" id="name" required formControlName="name">
+                    <span class="text">Name</span>
+                    <span class="line"></span>
+                </div>
+            </div>
 
-        <mat-form-field class="full-width">
-            <input matInput placeholder="Customer Age" name="age" id="age" required formControlName="age">
-        </mat-form-field>
+            <div class="col">
+                <div class="inputBox">
+                    <input type="number" name="age" id="age" required formControlName="age">
+                    <span class="text">Age</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
 
-        <mat-form-field class="full-width">
-            <input matInput placeholder="Customer Email" type="email" name="email" id="email" required formControlName="email">
-        </mat-form-field>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="email" name="email" id="email" required formControlName="email">
+                    <span class="text">Email</span>
+                    <span class="line"></span>
+                </div>
+            </div>
 
-        <mat-form-field class="full-width">
-            <input matInput placeholder="Customer Postal Code" name="postalCode" id="postalCode" required formControlName="postalCode">
-        </mat-form-field>
-        
-        <mat-form-field class="full-width">
-            <input matInput placeholder="Customer Address" name="address" id="address" required formControlName="address">
-        </mat-form-field>
+            <div class="col">
+                <div class="inputBox">
+                    <input type="number" name="postalCode" id="postalCode" required formControlName="postalCode">
+                    <span class="text">Postal Code</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
 
-        <mat-form-field class="full-width">
-            <input matInput placeholder="Customer Job" name="job" id="job" required formControlName="job">
-        </mat-form-field>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" name="address" id="address" required formControlName="address">
+                    <span class="text">Address</span>
+                    <span class="line"></span>
+                </div>
+            </div>
 
-        <mat-form-field class="third-width">
-            <input matInput placeholder="Image URL (enter image URL)" type="url" name="url" id="url" required formControlName="url">
-        </mat-form-field>
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" name="job" id="job" required formControlName="job">
+                    <span class="text">Job</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
 
-        <mat-form-field class="full-width">
-            <input matInput placeholder="Customer Notes" name="notes" id="notes" formControlName="notes">
-        </mat-form-field>
-        
-        <br>
-        <hr>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="url" name="url" id="url" required formControlName="url">
+                    <span class="text">Image URL</span>
+                    <span class="line"></span>
+                </div>
+            </div>
 
-        <!-- <button style="margin-right: 30px" mat-raised-button color="warn" value="ngSubmit" [disabled]="!myForm.form.valid">
-            Create Customer
-        </button> -->
+            <div class="col">
+                <div class="inputBox textarea">
+                    <textarea required="required" rows="5" name="notes" id="notes" formControlName="notes"></textarea>
+                    <span class="text">Description ...</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
 
-        <button class="a" value="ngSubmit" [disabled]="!myForm.form.valid">Create Customer</button>
-
-        <br><br>
-
+        <div class="row100">
+            <div class="col">
+                <input type="submit" value="Submit" [disabled]="!myForm.form.valid">
+            </div>
+        </div>
     </form>
-</div>
+</section>

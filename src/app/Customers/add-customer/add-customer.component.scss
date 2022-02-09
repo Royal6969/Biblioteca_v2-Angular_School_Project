@@ -1,52 +1,189 @@
-.a {
-    position: absolute;
-    width: 200px;
-    height: 60px;
-    text-align: center;
-    line-height: 60px;
-    color: #fff;
-    font-style: 24px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-family: sans-serif;
+@import url('https://fomts.googleapis.com/css?family=Poppins:400,500,600,700,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-    background-size: 400%;
-    border-radius: 30px;
-    z-index: 1;
-    border: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
-.a:hover {
-    animation: animate 8s linear infinite;
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    width: 100%;
+    background: #001923;
 }
 
-@keyframes animate {
-    0% {
-        background-position: 0%;
-    }
-    100% {
-        background-position: 400%;
-    }
-}
-
-.a::before {
+section::before {
     content: '';
     position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    z-index: -1;
-    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-    background-size: 400%;
-    border-radius: 40px;
-    opacity: 0;
-    transition: 0.5s;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(#ffeb3b, #e91e63);
+    border-radius: 50%;
+    transform: translate(-420px, -100px);
 }
 
-.a:hover::before {
-    filter: blur(20px);
-    opacity: 1;
-    animation: animate 8s linear infinite;
+section::after {
+    content: '';
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(#2196f3, #83d8ff);
+    border-radius: 50%;
+    transform: translate(400px, 100px);
 }
+
+.superContainer {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    max-width: 1000px;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(25px);
+}
+
+.superContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+    transform: skewX(-15deg);
+}
+
+.superContainer h2 {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.superContainer .row100 {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.superContainer .row100 .col {
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 20px;
+}
+
+.superContainer .row100 .col .inputBox {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+}
+
+.superContainer .row100 .col .inputBox input,
+.superContainer .row100 .col .inputBox textarea {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #000;
+}
+
+.superContainer .row100 .col .inputBox .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.superContainer .row100 .col .inputBox input:focus + .text,
+.superContainer .row100 .col .inputBox input:valid + .text,
+.superContainer .row100 .col .inputBox textarea:focus + .text,
+.superContainer .row100 .col .inputBox textarea:valid + .text {
+    top: -35px;
+    left: -10px;
+}
+
+.superContainer .row100 .col .inputBox .line {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+.superContainer .row100 .col .inputBox input:focus ~ .line,
+.superContainer .row100 .col .inputBox input:valid ~ .line {
+    height: 100%;
+}
+
+.superContainer .row100 .col .inputBox.textarea {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+
+.superContainer .row100 .col .inputBox textarea:focus ~ .line,
+.superContainer .row100 .col .inputBox textarea:valid ~ .line {
+    height: 100%;
+}
+
+.superContainer .row100 .col input[type="submit"] {
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    outline: none;
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 2px;
+}
+
+/*
+@media (max-width: 768px) 
+{
+    section::before {
+        transform: translate(-200px, -180px);
+    }
+    section::after {
+        transform: translate(220px, 180px);
+    }
+    .superContainer {
+        padding: 20px;
+    }
+    .superContainer h2 {
+        font-style: 28px;
+    }
+}
+*/

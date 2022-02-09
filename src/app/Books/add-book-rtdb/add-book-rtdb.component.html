@@ -2,7 +2,7 @@
 
 <mat-toolbar>Add a New Book | RealTimeDB</mat-toolbar>
 
-<div class="add-book-form" *ngIf="!submitted">
+<!-- <div class="add-book-form" *ngIf="!submitted">
     <a [routerLink]="['/book-list']">Back</a>
 
     <form #myForm="ngForm">
@@ -38,16 +38,66 @@
         <hr>
 
         <button class="a" (click)="saveBook()" [disabled]="!myForm.form.valid">Save Book</button>
-        
-        <!-- <br>
-        <hr>
-
-        <div *ngIf="submitted">
-            <h4>You submitted successfully!</h4>
-            <button class="a" (click)="newBook()" [disabled]="!myForm.form.valid">Add Book</button>        
-        </div> -->
 
         <br><br>
 
     </form>
-</div>
+</div> -->
+
+<section *ngIf="!submitted">
+    <form class="superContainer" #myForm="ngForm">
+        <h2>Glassmorphing Contact Us Form</h2>
+
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" name="title" id="title" required [(ngModel)]="book.title">
+                    <span class="text">Title</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" name="author" id="author" required [(ngModel)]="book.author">
+                    <span class="text">Author</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="number" name="price" id="price" required [(ngModel)]="book.price">
+                    <span class="text">Price</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="inputBox">
+                    <input type="url" name="imagePortada" id="imagePortada" required [(ngModel)]="book.imagePortada">
+                    <span class="text">Image URL</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox textarea">
+                    <textarea required="required" name="description" id="description" rows="5" formControlName="description"></textarea>
+                    <span class="text">Description ...</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row100">
+            <div class="col">
+                <input type="submit" value="Submit" (click)="saveBook()" [disabled]="!myForm.form.valid">
+            </div>
+        </div>
+    </form>
+</section>

@@ -1,6 +1,6 @@
 <!-- <p>book-list works!</p> -->
 
-<mat-toolbar>My Books | Firestore</mat-toolbar>
+<mat-toolbar class="toolbar-title">My Books | Firestore</mat-toolbar>
 <div class="superContainer" *ngIf="allBooksFirestore != null || allBooksFirestore != undefined">
     
   <div class="box" *ngFor="let book of allBooksFirestore">
@@ -24,7 +24,7 @@
 
 <!-- ----------------------------------------------------------------------------- -->
 
-<mat-toolbar>All Books || RealTimeDB</mat-toolbar>
+<mat-toolbar class="toolbar-title">All Books || RealTimeDB</mat-toolbar>
 
 <div class="superContainer">
 

@@ -72,9 +72,14 @@
 
             <div class="spacer2"></div>
 
-            <button class="toggle" (click)="switchTheme()">
+            <!-- <button class="toggle" (click)="switchTheme()">
                 {{ theme === "light-theme" ? "Switch to dark theme" : "Switch to light theme"}}
-            </button>
+            </button> -->
+
+            <label>
+                <input type="checkbox" (click)="switchTheme()">
+                <span class="check"></span>
+            </label>
 
             <div ngbDropdown class="d-inline-block" *ngIf="userInfo | async as user; else LoginButton">
                 <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>

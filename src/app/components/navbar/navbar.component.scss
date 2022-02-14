@@ -2,93 +2,13 @@ li {
     list-style: none;
 }
 
-/****************** navbar v2 *****************/
-
 .spacer1 {
-    width: 25%;
+    width: 15%;
 }
 .spacer2 {
-    width: 25%;
-}
-/*
-a {
-    position: relative;
-    padding: 4.5px 13px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    margin: 10px;
-    transition: 1s;
-    text-decoration: none;
-    overflow: hidden;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+    width: 15%;
 }
 
-a:hover {
-    background: #222327;
-    box-shadow: 0 0 10px #222327,
-                0 0 30px #222327,
-                0 0 60px #222327,
-                0 0 100px #222327;
-}
-
-a::before {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 400px;
-    background: #222327;
-    transition: 1s;
-    animation: animate 2s linear infinite;
-    animation-delay: calc(0.33s * var(--i));
-}
-
-a:hover::before {
-    width: 120%;
-}
-
-.router-link-active a:hover::before {
-    width: 120%;
-}
-
-@keyframes animate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-a::after {
-    content: '';
-    position: absolute;
-    inset: 4px;
-    background: #0e1538;
-    transition: 0.5s;
-}
-
-a:hover::after {
-    background: #222327;
-}
-
-a span {
-    position: relative;
-    z-index: 1;
-    font-size: 0.75em;
-    color: #fff;
-    opacity: 0.5;
-    letter-spacing: 1px;
-    transition: 0.5s;
-}
-
-a:hover span {
-    opacity: 1;
-} */
-
-
-/********************* navbar v3 ************************/
 
 .logo {
     width: 75px;
@@ -107,7 +27,8 @@ a:hover span {
     justify-content: center;
     align-items: center;
     /* border-radius: 10px; */
-    margin-top: 20px;
+    padding-top: 60px;
+    padding-bottom: 40px;
 }
 
 .navigation ul {

@@ -1,6 +1,6 @@
 <!-- <p>navbar works!</p> -->
 
-    <div class="navigation">
+    <div class="navigation" *ngIf="userInfo | async as user">
 
         <img [routerLink]="['/']" src="../../../assets/library.jpg" class="logo">
 

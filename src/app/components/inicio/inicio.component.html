@@ -1,69 +1,69 @@
 <!-- <p>inicio works!</p> -->
 
-<div class="body2">
-	<section>
+<div class="body1">
+	<section class="section1">
 		<img src="../../../assets/stars.png" id="stars">
 		<img src="../../../assets/moon.png" id="moon">
 		<img src="../../../assets/mountains_behind.png" id="mountains_behind">
+		
 		<h2 id="text">Moon Light</h2>
-		<a href="#sec" id="superBtn">Explore</a>
+		
+		<a id="superBtn" (click)="goToBookList()" *ngIf="userInfo | async as user; else GoButton">Vamos allá !</a>
+		
+		<ng-template #GoButton>
+			<a id="superBtn" routerLink='/login'>Login !</a>
+		</ng-template>
+		
 		<img src="../../../assets/mountains_front.png" id="mountains_front">
 	</section>
 
 	<div class="sec" id="sec">
 		<h2>Parallax Scrolling Effects</h2>
+		<br>
 		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error pariatur itaque culpa ullam esse cumque. Consequatur velit aliquid laborum expedita adipisci sed distinctio temporibus minima, quae optio vitae obcaecati! Hic officiis labore recusandae! Est in illo veniam vel quisquam error vitae eveniet? Reprehenderit aut dignissimos libero harum natus architecto, ipsum incidunt doloremque dolores, similique in porro pariatur! Beatae, provident soluta, possimus a in perferendis ad, ratione necessitatibus quia quam obcaecati repudiandae fugit quo nobis animi dolore vel error. Ab eaque ex nulla, dignissimos sapiente corporis blanditiis corrupti quis, impedit itaque odio facilis earum fuga commodi totam! Accusamus, deleniti? Tempore, qui!</p>
-		<br><br>
-		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic et odio aliquid quod, amet perspiciatis dolor, laborum molestias inventore, soluta mollitia. Corrupti, vitae dolorum. Odit in sequi autem eveniet. Hic, tenetur! Fugit in nobis aspernatur quibusdam quia. Quia nesciunt neque necessitatibus ad assumenda! Alias omnis facere dolore est, aut expedita laborum iste id quasi quidem et consequuntur. Ullam officiis voluptas culpa, recusandae enim quod deleniti similique ut dolor sunt iusto amet eaque, fugiat aut. Quisquam unde odit deserunt molestias ullam quasi aliquam. Aliquid vel porro repudiandae temporibus ullam! Expedita aperiam labore velit deleniti officiis unde error ipsam cumque fuga molestiae?</p>
-		<br><br>
-		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic et odio aliquid quod, amet perspiciatis dolor, laborum molestias inventore, soluta mollitia. Corrupti, vitae dolorum. Odit in sequi autem eveniet. Hic, tenetur! Fugit in nobis aspernatur quibusdam quia. Quia nesciunt neque necessitatibus ad assumenda! Alias omnis facere dolore est, aut expedita laborum iste id quasi quidem et consequuntur. Ullam officiis voluptas culpa, recusandae enim quod deleniti similique ut dolor sunt iusto amet eaque, fugiat aut. Quisquam unde odit deserunt molestias ullam quasi aliquam. Aliquid vel porro repudiandae temporibus ullam! Expedita aperiam labore velit deleniti officiis unde error ipsam cumque fuga molestiae?</p>
-		<br><br>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error pariatur itaque culpa ullam esse cumque. Consequatur velit aliquid laborum expedita adipisci sed distinctio temporibus minima, quae optio vitae obcaecati! Hic officiis labore recusandae! Est in illo veniam vel quisquam error vitae eveniet? Reprehenderit aut dignissimos libero harum natus architecto, ipsum incidunt doloremque dolores, similique in porro pariatur! Beatae, provident soluta, possimus a in perferendis ad, ratione necessitatibus quia quam obcaecati repudiandae fugit quo nobis animi dolore vel error. Ab eaque ex nulla, dignissimos sapiente corporis blanditiis corrupti quis, impedit itaque odio facilis earum fuga commodi totam! Accusamus, deleniti? Tempore, qui!</p>
-		<br><br>
-		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic et odio aliquid quod, amet perspiciatis dolor, laborum molestias inventore, soluta mollitia. Corrupti, vitae dolorum. Odit in sequi autem eveniet. Hic, tenetur! Fugit in nobis aspernatur quibusdam quia. Quia nesciunt neque necessitatibus ad assumenda! Alias omnis facere dolore est, aut expedita laborum iste id quasi quidem et consequuntur. Ullam officiis voluptas culpa, recusandae enim quod deleniti similique ut dolor sunt iusto amet eaque, fugiat aut. Quisquam unde odit deserunt molestias ullam quasi aliquam. Aliquid vel porro repudiandae temporibus ullam! Expedita aperiam labore velit deleniti officiis unde error ipsam cumque fuga molestiae?</p>
-		<br><br>
+		<br>
 		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic et odio aliquid quod, amet perspiciatis dolor, laborum molestias inventore, soluta mollitia. Corrupti, vitae dolorum. Odit in sequi autem eveniet. Hic, tenetur! Fugit in nobis aspernatur quibusdam quia. Quia nesciunt neque necessitatibus ad assumenda! Alias omnis facere dolore est, aut expedita laborum iste id quasi quidem et consequuntur. Ullam officiis voluptas culpa, recusandae enim quod deleniti similique ut dolor sunt iusto amet eaque, fugiat aut. Quisquam unde odit deserunt molestias ullam quasi aliquam. Aliquid vel porro repudiandae temporibus ullam! Expedita aperiam labore velit deleniti officiis unde error ipsam cumque fuga molestiae?</p>
 	</div>
 </div>
 
-
-<!-- <div class="body">
-
-	<div class="v-header container">
-            
-		<div class="fullscreen-video-wrap">
-	
-			<video id="miVideo" autoplay muted loop>
-				<source src="../../../assets/library.mp4" type="video/mp4">
-			</video>
+<!-- <div class="body2">
+	<section class="section2">
+		<div class="content1">
+			<h2 class="h2-2">Non-Rectangular Header</h2>
 		</div>
-
-		<div class="header-overlay">
-			<div class="header-content">
-				<h1>Hola Lector</h1>
-				<p>Mi nombre es Sergio, y esto es una práctica de Angular!
-					<br>
-					Este ejericio tiene de base todo lo que ya se hizo en el ejercicio de Videojuegos y Coches,
-					<br> 
-					Lo nuevo de este proyecto es que se enfoca en el aprender a usar Firebase y sus diferentes servicios.<br>
-					Se trata de una web desarrollada para ser utilizada por el personal bibliotecario de la recepción,<br>
-					la cual permite ver el listado de libros disponibles en la biblioteca, un listado cuyos libros,<br>
-					están almacenados en las bases de datos de Firestore y RealTimeDatabase, llevando cada una su propio CRUD,<br>
-					para poder crear, leer, actualizar y eliminar los libros desde las funcionalidades de la propia web.<br>
-					En el servicio de la RealTimeDB he usado tipos propios de Firebase como el AngularFireList y AngularFireObject.<br>
-					He enviado objetos a través de rutas, recibiéndolos en otros componentes gracias a Router y NavigationExtras,<br>
-					así como poder controlar rutas y el acceso a diversos componentes con el método de getCurrentNavigation() de Router.<br>
-					Los datos del objeto se han controlado en los formularios con FormControl, FormGroup, Validators de AngularForms.<br>
-					Para el login se ha utilizado el módulo AngularFireAuth con métodos propios como el signInWithPopup() provisto por Google,<br>
-					y respecto a los estilos se volvío a instalar AngularMaterial y se importaron las librerías de Bootstrap y Bootswatch.
-					</p>
-				<br><br><br>
-				<a class="btn" (click)="goToBookList()" *ngIf="userInfo | async as user; else GoButton">Vamos allá !</a>
-				<ng-template #GoButton>
-					<a class="btn" routerLink='/login'>Login !</a>
-				</ng-template>
-			</div>
-		</div>
-		
-	</div>
+	</section>
 </div> -->
+
+<div class="body2">
+	<section class="section2">
+		<span class="curve">
+			<img class="img2" src="../../../assets/curve.png" alt=""> <!-- aquí tengo que poner el recorte semicircular de la parte de abajo de la foto que pongo como background del section -->
+		</span>
+	</section>
+</div>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error pariatur itaque culpa ullam esse cumque. Consequatur velit aliquid laborum expedita adipisci sed distinctio temporibus minima, quae optio vitae obcaecati! Hic officiis labore recusandae! Est in illo veniam vel quisquam error vitae eveniet? Reprehenderit aut dignissimos libero harum natus architecto, ipsum incidunt doloremque dolores, similique in porro pariatur! Beatae, provident soluta, possimus a in perferendis ad, ratione necessitatibus quia quam obcaecati repudiandae fugit quo nobis animi dolore vel error. Ab eaque ex nulla, dignissimos sapiente corporis blanditiis corrupti quis, impedit itaque odio facilis earum fuga commodi totam! Accusamus, deleniti? Tempore, qui!</p>
+		<br>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic et odio aliquid quod, amet perspiciatis dolor, laborum molestias inventore, soluta mollitia. Corrupti, vitae dolorum. Odit in sequi autem eveniet. Hic, tenetur! Fugit in nobis aspernatur quibusdam quia. Quia nesciunt neque necessitatibus ad assumenda! Alias omnis facere dolore est, aut expedita laborum iste id quasi quidem et consequuntur. Ullam officiis voluptas culpa, recusandae enim quod deleniti similique ut dolor sunt iusto amet eaque, fugiat aut. Quisquam unde odit deserunt molestias ullam quasi aliquam. Aliquid vel porro repudiandae temporibus ullam! Expedita aperiam labore velit deleniti officiis unde error ipsam cumque fuga molestiae?</p>
+
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error pariatur itaque culpa ullam esse cumque. Consequatur velit aliquid laborum expedita adipisci sed distinctio temporibus minima, quae optio vitae obcaecati! Hic officiis labore recusandae! Est in illo veniam vel quisquam error vitae eveniet? Reprehenderit aut dignissimos libero harum natus architecto, ipsum incidunt doloremque dolores, similique in porro pariatur! Beatae, provident soluta, possimus a in perferendis ad, ratione necessitatibus quia quam obcaecati repudiandae fugit quo nobis animi dolore vel error. Ab eaque ex nulla, dignissimos sapiente corporis blanditiis corrupti quis, impedit itaque odio facilis earum fuga commodi totam! Accusamus, deleniti? Tempore, qui!</p>
+		<br>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic et odio aliquid quod, amet perspiciatis dolor, laborum molestias inventore, soluta mollitia. Corrupti, vitae dolorum. Odit in sequi autem eveniet. Hic, tenetur! Fugit in nobis aspernatur quibusdam quia. Quia nesciunt neque necessitatibus ad assumenda! Alias omnis facere dolore est, aut expedita laborum iste id quasi quidem et consequuntur. Ullam officiis voluptas culpa, recusandae enim quod deleniti similique ut dolor sunt iusto amet eaque, fugiat aut. Quisquam unde odit deserunt molestias ullam quasi aliquam. Aliquid vel porro repudiandae temporibus ullam! Expedita aperiam labore velit deleniti officiis unde error ipsam cumque fuga molestiae?</p>
+
+
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error pariatur itaque culpa ullam esse cumque. Consequatur velit aliquid laborum expedita adipisci sed distinctio temporibus minima, quae optio vitae obcaecati! Hic officiis labore recusandae! Est in illo veniam vel quisquam error vitae eveniet? Reprehenderit aut dignissimos libero harum natus architecto, ipsum incidunt doloremque dolores, similique in porro pariatur! Beatae, provident soluta, possimus a in perferendis ad, ratione necessitatibus quia quam obcaecati repudiandae fugit quo nobis animi dolore vel error. Ab eaque ex nulla, dignissimos sapiente corporis blanditiis corrupti quis, impedit itaque odio facilis earum fuga commodi totam! Accusamus, deleniti? Tempore, qui!</p>
+		<br>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic et odio aliquid quod, amet perspiciatis dolor, laborum molestias inventore, soluta mollitia. Corrupti, vitae dolorum. Odit in sequi autem eveniet. Hic, tenetur! Fugit in nobis aspernatur quibusdam quia. Quia nesciunt neque necessitatibus ad assumenda! Alias omnis facere dolore est, aut expedita laborum iste id quasi quidem et consequuntur. Ullam officiis voluptas culpa, recusandae enim quod deleniti similique ut dolor sunt iusto amet eaque, fugiat aut. Quisquam unde odit deserunt molestias ullam quasi aliquam. Aliquid vel porro repudiandae temporibus ullam! Expedita aperiam labore velit deleniti officiis unde error ipsam cumque fuga molestiae?</p>
+
+
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error pariatur itaque culpa ullam esse cumque. Consequatur velit aliquid laborum expedita adipisci sed distinctio temporibus minima, quae optio vitae obcaecati! Hic officiis labore recusandae! Est in illo veniam vel quisquam error vitae eveniet? Reprehenderit aut dignissimos libero harum natus architecto, ipsum incidunt doloremque dolores, similique in porro pariatur! Beatae, provident soluta, possimus a in perferendis ad, ratione necessitatibus quia quam obcaecati repudiandae fugit quo nobis animi dolore vel error. Ab eaque ex nulla, dignissimos sapiente corporis blanditiis corrupti quis, impedit itaque odio facilis earum fuga commodi totam! Accusamus, deleniti? Tempore, qui!</p>
+		<br>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic et odio aliquid quod, amet perspiciatis dolor, laborum molestias inventore, soluta mollitia. Corrupti, vitae dolorum. Odit in sequi autem eveniet. Hic, tenetur! Fugit in nobis aspernatur quibusdam quia. Quia nesciunt neque necessitatibus ad assumenda! Alias omnis facere dolore est, aut expedita laborum iste id quasi quidem et consequuntur. Ullam officiis voluptas culpa, recusandae enim quod deleniti similique ut dolor sunt iusto amet eaque, fugiat aut. Quisquam unde odit deserunt molestias ullam quasi aliquam. Aliquid vel porro repudiandae temporibus ullam! Expedita aperiam labore velit deleniti officiis unde error ipsam cumque fuga molestiae?</p>
+
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error pariatur itaque culpa ullam esse cumque. Consequatur velit aliquid laborum expedita adipisci sed distinctio temporibus minima, quae optio vitae obcaecati! Hic officiis labore recusandae! Est in illo veniam vel quisquam error vitae eveniet? Reprehenderit aut dignissimos libero harum natus architecto, ipsum incidunt doloremque dolores, similique in porro pariatur! Beatae, provident soluta, possimus a in perferendis ad, ratione necessitatibus quia quam obcaecati repudiandae fugit quo nobis animi dolore vel error. Ab eaque ex nulla, dignissimos sapiente corporis blanditiis corrupti quis, impedit itaque odio facilis earum fuga commodi totam! Accusamus, deleniti? Tempore, qui!</p>
+		<br>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic et odio aliquid quod, amet perspiciatis dolor, laborum molestias inventore, soluta mollitia. Corrupti, vitae dolorum. Odit in sequi autem eveniet. Hic, tenetur! Fugit in nobis aspernatur quibusdam quia. Quia nesciunt neque necessitatibus ad assumenda! Alias omnis facere dolore est, aut expedita laborum iste id quasi quidem et consequuntur. Ullam officiis voluptas culpa, recusandae enim quod deleniti similique ut dolor sunt iusto amet eaque, fugiat aut. Quisquam unde odit deserunt molestias ullam quasi aliquam. Aliquid vel porro repudiandae temporibus ullam! Expedita aperiam labore velit deleniti officiis unde error ipsam cumque fuga molestiae?</p>
+
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error pariatur itaque culpa ullam esse cumque. Consequatur velit aliquid laborum expedita adipisci sed distinctio temporibus minima, quae optio vitae obcaecati! Hic officiis labore recusandae! Est in illo veniam vel quisquam error vitae eveniet? Reprehenderit aut dignissimos libero harum natus architecto, ipsum incidunt doloremque dolores, similique in porro pariatur! Beatae, provident soluta, possimus a in perferendis ad, ratione necessitatibus quia quam obcaecati repudiandae fugit quo nobis animi dolore vel error. Ab eaque ex nulla, dignissimos sapiente corporis blanditiis corrupti quis, impedit itaque odio facilis earum fuga commodi totam! Accusamus, deleniti? Tempore, qui!</p>
+		<br>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic et odio aliquid quod, amet perspiciatis dolor, laborum molestias inventore, soluta mollitia. Corrupti, vitae dolorum. Odit in sequi autem eveniet. Hic, tenetur! Fugit in nobis aspernatur quibusdam quia. Quia nesciunt neque necessitatibus ad assumenda! Alias omnis facere dolore est, aut expedita laborum iste id quasi quidem et consequuntur. Ullam officiis voluptas culpa, recusandae enim quod deleniti similique ut dolor sunt iusto amet eaque, fugiat aut. Quisquam unde odit deserunt molestias ullam quasi aliquam. Aliquid vel porro repudiandae temporibus ullam! Expedita aperiam labore velit deleniti officiis unde error ipsam cumque fuga molestiae?</p>

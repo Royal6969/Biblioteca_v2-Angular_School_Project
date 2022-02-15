@@ -7,6 +7,8 @@ import firebase from 'firebase/compat/app';
 })
 export class AuthService {
 
+  userVerify?:any;
+
   constructor(
     private angularFireAuth: AngularFireAuth
   ) { }
@@ -31,7 +33,13 @@ export class AuthService {
 
   async loginWithGoogle(email: string, password: string) {
     try {
-      return await this.angularFireAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
+      this.getUserInfo().subscribe(result =>{
+        // this.userVerify = (result !== null && result.emailVerified !== false) ? true:false;
+        this.userVerify = (result !== null) ? true:false;
+      });
+
+      return await this.angularFireAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    
     } catch (err) {
       console.log("error en login con Google: ", err);
       return null;
@@ -41,6 +49,20 @@ export class AuthService {
   getUserInfo() {
     return this.angularFireAuth.authState;
   }
+
+  get isLoggedIn(){
+    try {
+      this.getUserInfo().subscribe(result =>{
+        // this.userVerify = (result !== null && result.emailVerified !== false) ? true:false;
+        this.userVerify = (result !== null) ? true:false;
+      });
+    } catch (err) {
+      console.log("Error: " + err);
+      return false;
+    }
+    return this.userVerify;
+  }
+
 
   logout() {
     this.angularFireAuth.signOut();

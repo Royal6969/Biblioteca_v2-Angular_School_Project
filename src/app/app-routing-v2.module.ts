@@ -25,67 +25,83 @@ import { RegisterComponent } from './components/register/register.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { PanelControlComponent } from './components/panel-control/panel-control.component';
 
+import { AuthGuard } from './guards/guard.guard';
+
 
 const routes: Routes = [
   {
     path: 'book-list',
     loadChildren: () => import('./Books/books.module').then((m) => m.BooksModule),
-    component: BookListComponent
+    component: BookListComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: 'book-details',
-    component: BookDetailsComponent
+    component: BookDetailsComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: 'book-details-rtdb',
-    component: BookDetailsComponent
+    component: BookDetailsComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: 'add-book-fire',
-    component: AddBookFireComponent
+    component: AddBookFireComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: 'add-book-rtdb',
-    component: AddBookRtdbComponent
+    component: AddBookRtdbComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: 'edit-book-rtdb',
-    component: EditBookRtdbComponent
+    component: EditBookRtdbComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: 'edit-book-fire',
-    component: EditBookFireComponent
+    component: EditBookFireComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: 'delete-book',
-    component: DeleteBookComponent
+    component: DeleteBookComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: 'delete-book-fire',
-    component: DeleteBookFireComponent
+    component: DeleteBookFireComponent,
+    canActivate:[AuthGuard]
   },
 
 
   {
     path: 'clientes-v2',
     loadChildren: () => import('./Customers/customers.module').then((m) => m.CustomersModule),
-    component: ClientesV2Component
+    component: ClientesV2Component,
+    canActivate:[AuthGuard]
   },
   {
     path: 'add-customer',
-    component: AddCustomerComponent
+    component: AddCustomerComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: 'customer-details',
-    component: CustomerDetailsComponent
+    component: CustomerDetailsComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: 'edit-customer',
-    component: EditCustomerComponent
+    component: EditCustomerComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: 'delete-customer',
-    component: DeleteCustomerComponent
+    component: DeleteCustomerComponent,
+    canActivate:[AuthGuard]
   },
 
 
@@ -103,17 +119,20 @@ const routes: Routes = [
   },
   {
     path: 'panel-control',
-    component: PanelControlComponent
+    component: PanelControlComponent,
+    canActivate:[AuthGuard]
   },
 
 
   {
     path: 'crear-prestamo-fire',
-    component: CrearPrestamoFireComponent
+    component: CrearPrestamoFireComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: 'lista-prestamos',
-    component: ListaPrestamosComponent
+    component: ListaPrestamosComponent,
+    canActivate:[AuthGuard]
   },
 
 

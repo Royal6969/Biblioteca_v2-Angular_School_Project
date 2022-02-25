@@ -1,59 +1,61 @@
 <!-- <p>edit-book-fire works!</p> -->
 
-<mat-toolbar class="toolbar-title">Edit Book | Firestore</mat-toolbar>
+<mat-toolbar class="toolbar-title">Add a New Book | Firestore</mat-toolbar>
 
-<div class="edit-book-form">
-    <a [routerLink]="['/book-list']">Back</a>
+<section>
+    <form class="superContainer" #values="ngForm" [formGroup]="bookForm" (ngSubmit)="updateBook()">
+        <h2>Glassmorphing Contact Us Form</h2>
 
-    <form #values="ngForm" [formGroup]="bookForm" (ngSubmit)="updateBook()">
-      <mat-form-field class="full-width">
-        <input matInput placeholder="Book Title" name="title" id="title" formControlName="title" [class]="isValid('title')" required>
-      </mat-form-field>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" placeholder="Book Title" name="title" id="title" formControlName="title" [class]="isValid('title')" required>
+                    <span class="text">Title</span>
+                    <span class="line"></span>
+                </div>
+            </div>
 
-      <mat-form-field class="full-width">
-        <input matInput placeholder="Book Author" name="author" id="author" formControlName="author" [class]="isValid('author')" required>
-      </mat-form-field>
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" placeholder="Book Author" name="author" id="author" formControlName="author" [class]="isValid('author')" required>
+                    <span class="text">Author</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
 
-      <mat-form-field class="full-width">
-        <input matInput placeholder="Book Price" type="number" name="price" id="price" formControlName="price" [class]="isValid('price')" required>
-      </mat-form-field>
-      
-      <!-- los datepickers están desactivados porque aún no hemos hecho el formateo de fecha de <mat-datepicker> -->
-      <mat-form-field class="full-width" >
-          <input matInput [matDatepicker]="dateadded" placeholder="Date Added" type="date" name="dateadded">
-          <mat-datepicker-toggle matSuffix [for]="dateadded"></mat-datepicker-toggle>
-      </mat-form-field>
-      <mat-datepicker #dateadded></mat-datepicker>
-      
-      <mat-form-field class="full-width" >
-          <input matInput [matDatepicker]="dateread" placeholder="Date Read" type="date" name="dateread">
-          <mat-datepicker-toggle matSuffix [for]="dateread"></mat-datepicker-toggle>
-      </mat-form-field>
-      <mat-datepicker #dateread></mat-datepicker>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="number" placeholder="Book Price" type="number" name="price" id="price" formControlName="price" [class]="isValid('price')" required>
+                    <span class="text">Price</span>
+                    <span class="line"></span>
+                </div>
+            </div>
 
-      
-      <mat-form-field class="full-width">
-        <textarea matInput name="description" id="description" rows="5" placeholder="Book Description" formControlName="description"></textarea>
-      </mat-form-field>
-    
-      <mat-form-field class="full-width">
-        <input matInput placeholder="Book Rate (1-5)" min="1" max="5" step="0.1" type="number" name="rate" id="rate" formControlName="rate">
-      </mat-form-field>    
-     
+            <div class="col">
+                <div class="inputBox">
+                    <input placeholder="Image URL (enter image URL)" type="url" name="imagePortada" id="imagePortada" formControlName="imagePortada" [class]="isValid('imagePortada')" required>
+                    <span class="text">Image URL</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
 
-      <mat-form-field class="third-width">
-        <input matInput placeholder="Image URL (enter image URL)" type="url" name="imagePortada" id="imagePortada" formControlName="imagePortada" [class]="isValid('imagePortada')" required>
-      </mat-form-field>
-      
-      <hr>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox textarea">
+                    <textarea name="description" id="description" rows="5" placeholder="Book Description" formControlName="description"></textarea>
+                    <span class="text">Description ...</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
 
-      <!-- <button style="margin-right: 30px" mat-raised-button color="warn" (click)="updateBook()" value="updateBook">
-        Update Book
-      </button> -->
-
-      <button class="a" (click)="updateBook()" value="updateBook">Update Book</button>
-
-      <br><br>
-    
+        <div class="row100">
+            <div class="col">
+                <input type="submit" (click)="updateBook()" value="updateBook">
+            </div>
+        </div>
     </form>
-</div>
+</section>

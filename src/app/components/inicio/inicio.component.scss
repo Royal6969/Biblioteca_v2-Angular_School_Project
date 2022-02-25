@@ -11,7 +11,8 @@
 .body1 {
     min-height: 100vh;
     overflow-x: hidden;
-    background: linear-gradient(#2b1055, #7597de);
+    background: #adcff5;
+    z-index: 10;
 }
 
 .section1 {
@@ -30,9 +31,14 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 100px;
-    background: linear-gradient(to top, #1c0522, transparent);
+    height: 50px;
+    background: linear-gradient(to top, rgb(255, 254, 248), transparent);
     z-index: 1000;
+}
+
+.section1 .altair-izquierda {
+    width: 100%;
+    height: 100%;
 }
 
 .section1 img {
@@ -78,50 +84,20 @@
 .sec {
     position: relative;
     padding: 100px;
-    background: #1c0522;
+    background: var(--background-color);
 }
 
 .sec h2 {
     font-size: 3.5em;
     margin-bottom: 10px;
-    color: #fff;
+    color: var(--text-color);
 }
 
 .sec p {
     font-size: 1em;
-    color: #fff;
+    color: var(--text-color);
 }
 
-/*********** Non-Rectangular Header - Circle no scroll tranform ************/
-/*
-.body2 {
-    min-height: 150vh;
-}
-
-.section2 {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: url(../../../assets/don-alberto-y-luis.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    clip-path: circle(180vh at 50% -80vh);
-}
-
-.section2 .content1 {
-    max-width: 1000px;
-    text-align: center;
-}
-
-.section2 .content1 .h2-2 {
-    font-size: 5em;
-    color: #fff;
-    font-weight: 700;
-}
-*/
 
 /*********** Non-Rectangular Header - Circle scroll tranform ************/
 .body2 {
@@ -129,13 +105,13 @@
     background: #111;
 }
 
-
 .section2 {
     position: absolute;
     width: 100%;
     height: calc(100% - 200px);
-    background: #2abbff;
-    // background: url(../../../assets/);
+    // background: #2abbff;
+    background: url(../../../assets/altair-admin-background.png);
+    background-size: cover;
 }
 
 .section2 .curve {
@@ -144,12 +120,233 @@
     height: 200px;
     width: 100%;
     transform-origin: top;
+    z-index: 100;
 }
 
 .section2 .curve .img2 {
     width: 100%;
     height: 100%;
+    z-index: 100;
 }
 
-/*********** Non-Rectangular Header - Triangle ************/
+.sec {
+    position: relative;
+    background: #fff;
+    padding-left: 10%;
+    padding-right: 10%;
+}
 
+.sec h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #1c0522;
+}
+
+.sec p {
+    font-size: 1em;
+    color: #1c0522;
+}
+
+/************************ Books *************************/
+
+.body3 {
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.section3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    margin-bottom: 50px;
+}
+
+.section3 .book {
+    position: relative;
+    width: 283px;
+    height: 467px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    margin-right: 75px;
+}
+
+.section3 .book:hover {
+    transform: rotateY(35deg);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.section3 .book:active {
+    transform: rotateY(180deg);
+}
+
+.section3 .book1:before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    transform-origin: left;
+    background: url("https://blogger.googleusercontent.com/img/a/AVvXsEjqJ4YVWL-_Jz1mYlWUcbORPtPpoIWLbRUcF37KyD6cdTzMUrMpkAzBwNHOF7Ap01cFtWGqfcvh_b_FIxx0iJsdVeHuBsCRUG6mxDzp_V5YNEkJL3wXmgGmbE93Qjs38QcrHUaS_CeIGLQGEpslKpQWAnAkVFMkaIQwEdhe9qj636LjUF7CZ_z6zMS7=w33-h320");
+    background-position: center;
+    background-size: cover;
+    transform: rotateY(90deg);
+}
+
+.section3 .book1:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    background: url("https://blogger.googleusercontent.com/img/a/AVvXsEg2P50fqhGG79h20e3kZ3ns6EI6U1ru7xXCeK3AFyj3Ish-T6FpoIbQfA-dU7BlRpk18JPuWKiNQP39QAbMK_VnejlyN6WO0ZUHQFpAWjs3TFxgqX6NQytpeZV5Dm2dnSP60Kzgh0sOmuPvCe6GWqszbCj4lhcaqn-yWnUqG60XbWgcsGcrWn7ZDCpD=w211-h320");
+    background-position: center;
+    background-size: cover;
+    transform: rotateY(180deg) translateZ(60px);
+}
+
+
+.section3 .book img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/******************* Book - 2 ********************/
+
+.section3 .book2:before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    transform-origin: left;
+    background: url("https://blogger.googleusercontent.com/img/a/AVvXsEh3xgakvx3hZfYNhaRCUpXbnLw0FplT5BMk6nhjchKZ7b9n3h3YJmO9gqOFPfS0C3cLOWZ3X2VPkymaNHNZF6U22cN3EZH8hnGgkVs0TuKw20mzFFFhWzLvpnmZuA2npu5j54uFHxeqIJI2HjaYkntUt3AwneDJrKBOBZ_MsyfFQXMkWg2hZsHBRoQI=w27-h320");
+    background-position: center;
+    background-size: cover;
+    transform: rotateY(90deg);
+}
+
+.section3 .book2:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    background: url("https://blogger.googleusercontent.com/img/a/AVvXsEjHDQXZgteGbrEFG7IDD00kWXdfd_6dO1jALqE3_tRmGdl6-C1TfGOBoYwhFL71BtUm8wjOIBBBpa-xTEiLfPbpLgVsH4MUDubQ_8wYzQxeVrtP4x7IxUxJ5rYO2QxTGQjERvcsg5_4iq5JyKxmSYV2lBDhOh3alI52y5eeZd7kVt-RFSCC8dREUKY6=w200-h320");
+    background-position: center;
+    background-size: cover;
+    transform: rotateY(180deg) translateZ(60px);
+}
+
+/******************* Book - 3 ********************/
+
+.section3 .book3:before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    transform-origin: left;
+    background: url("https://blogger.googleusercontent.com/img/a/AVvXsEjBYpjW7L0YV5UsNEVR0tYvt9y33OkKQvZJl0Xw4hARqIOYfdqkySbGJyZYXkLVhS5cv69_8iqPicGqsqYOREA7fNtXwRm2cfFUcNKsImsufvxcY8_34RCI_fnjKhO3QKkHHd-igvGurLm0QaWVWTpq4HXrZqk3pvb3aQ1cv2pTT0oCCjQcOOk0WcDP=w50-h320");
+    background-position: center;
+    background-size: cover;
+    transform: rotateY(90deg);
+}
+
+.section3 .book3:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    background: url("https://blogger.googleusercontent.com/img/a/AVvXsEjT8bZHD4pC6eVQHzHMDGIpsfINupuDWMb74zK8UcqYvnKHeyNKEbG1SLyg5n9acziFeacjBuiycGp6koT4LhwQyDUlt5ELGxN7pcGE5qlF_SZwY7Wga4xEmvYZJge3Mm7JVYk8cTvM_fnF-gQaDhJmZt1p-ALT78JhHVMCwXsZfbwEYwbjBPLGLF4d=w213-h320");
+    background-position: center;
+    background-size: cover;
+    transform: rotateY(180deg) translateZ(60px);
+}
+
+/******************* Book - 4 ********************/
+
+.section3 .book4:before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    transform-origin: left;
+    background: url("https://blogger.googleusercontent.com/img/a/AVvXsEg1nDkpND_6yZSsK1o4GriUluqnGljQ1GI8YuZiSalRp51xLkPScfvonw3eARstHZ8ZahnCVxlWaJKEJrTxmNpft1e-phYX0kcpMF6B6ZsHrhdoY_svmOsBioENbGF4d9iLURkPcRrE6DTF8MNzxU5ncX13XwUG4-_dkdCduhwayYdcR9mNVDDyr82k=w34-h320");
+    background-position: center;
+    background-size: cover;
+    transform: rotateY(90deg);
+}
+
+.section3 .book4:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    background: url("https://blogger.googleusercontent.com/img/a/AVvXsEh1cXEo5kN4MB3dTRJKfuDIBdb-r-5jsWUbLuVwFMjilI27NFu8qNaF6VMKwNScy8XETaEOFgS4L9k3-nKPqiQUoqmUmrZ4vSyhW_iqtxhhjeyAu5eXZeDAuwt_EdiXA7sX5nxuNqBZFZcb2BP5bD0NtzZa8uvvX5ioonIZ-AzGuLDrYkIaPJeFgvO9=w224-h320");
+    background-position: center;
+    background-size: cover;
+    transform: rotateY(180deg) translateZ(60px);
+}
+
+/******************* Book - 5 ********************/
+
+.section3 .book5:before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    transform-origin: left;
+    background: url("https://blogger.googleusercontent.com/img/a/AVvXsEgHRay9Emxi1iz0jaQGR0dGYS9iMjsqN8Rbc8NZ_mG2rNBkC2oui87VbPuz7Lz3r4RFG0l3iker57YsM4mtj_Inl44glWYJlUhLD6QX00yf3h-ILT4cFcZBhvB_tINW2THfpmGnovG_Sy6AmsBe9MkhIN9aks1_1mZE3q3UEXT1ZUyN8or7bostNtwp=w26-h320");
+    background-position: center;
+    background-size: cover;
+    transform: rotateY(90deg);
+}
+
+.section3 .book5:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    background: url("https://blogger.googleusercontent.com/img/a/AVvXsEhoX5giG4hJ59dJrNFgBhTaLR9SQj6g6Y3Dhv2irVuzaKnGt_6Nv9a15tXA_jd7EkVEJfpCPT-xkk4M5bXhQWJ41yHmK7ccOcyaxRiJVHtp7ohLHhZ3KaRXWBm4PEX7N2XiYXg2VMSY_TMYdd-_dBHgzltuv6HZ30hB9Pq8N8KtsezxZrN-P3d61fGL=w209-h320");
+    background-position: center;
+    background-size: cover;
+    transform: rotateY(180deg) translateZ(60px);
+}
+
+/******************* Book - 6 ********************/
+
+.section3 .book6:before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    transform-origin: left;
+    background: url("https://blogger.googleusercontent.com/img/a/AVvXsEha6_23qx4kuDuqNEKIaDTQ54xprYT2g7Nx2AhKEuM7PFaO8UbY7ooU09zmZUCL3mvwmkNEDTw4oxrKqaYTfu1Hra4GbAzhJrxsNjPgNif3q4ausEMJWk8TaRUZHA_YDjN-6puTUEfo0iPQfBNEs-2mSUDRkFtzr6UTfXfaDitzsxgwPuhGu7XwGkcx=w22-h320");
+    background-position: center;
+    background-size: cover;
+    transform: rotateY(90deg);
+}
+
+.section3 .book6:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    background: url("https://blogger.googleusercontent.com/img/a/AVvXsEhAFJw8vtLIU-XPSSVRR505lAc7snoJQ25LwTkiw8gIvslz-1jJS32B6WLEmOX5jWm8GyFovINXz_-RNGbh1I1IlxGsRJzk2shfS8FcSgMvhC9G6t5PR8INOXfQJA95pcpMSe_aGBgqkA3NEFr-Q4CX-HBxjDCyF3e1Ndc5FySAgW1Xg0Gq9r1zMLg1=w208-h320");
+    background-position: center;
+    background-size: cover;
+    transform: rotateY(180deg) translateZ(60px);
+}

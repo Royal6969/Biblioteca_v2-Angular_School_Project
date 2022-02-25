@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
       console.log("Se registró: ", res);
     })
 
-    this.router.navigate(['/inicio']);
+    this.router.navigate(['/book-list']);
   }
 
   loginWithGoogle() {
@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
       console.log("Se registró: ", res);
     })
 
-    this.router.navigate(['/inicio']);
+    this.router.navigate(['/book-list']);
   }
 
   getUserInfo() {

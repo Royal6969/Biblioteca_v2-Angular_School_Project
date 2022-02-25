@@ -2,47 +2,86 @@
 
 <mat-toolbar class="toolbar-title">Edit Customer</mat-toolbar>
 
-<div class="edit-customer-form">
-    <a [routerLink]="['/clientes-v2']">Back</a>
+<section>
+  <form class="superContainer" #values="ngForm" [formGroup]="customerForm" (ngSubmit)="updateCustomer()">
+      <h2>Glassmorphing Contact Us Form</h2>
 
-    <form #values="ngForm" [formGroup]="customerForm" (ngSubmit)="updateCustomer()">
-      <mat-form-field class="full-width">
-        <input matInput placeholder="Customer Name" name="name" id="name" formControlName="name" [class]="isValid('name')" required>
-      </mat-form-field>
+      <div class="row100">
+          <div class="col">
+              <div class="inputBox">
+                  <input placeholder="Customer Name" name="name" id="name" formControlName="name" [class]="isValid('name')" required>
+                  <span class="text">Name</span>
+                  <span class="line"></span>
+              </div>
+          </div>
 
-      <mat-form-field class="full-width">
-        <input matInput placeholder="Customer Age" name="age" id="age" formControlName="age" [class]="isValid('age')" required>
-      </mat-form-field>
+          <div class="col">
+              <div class="inputBox">
+                  <input placeholder="Customer Age" name="age" id="age" formControlName="age" [class]="isValid('age')" required>
+                  <span class="text">Age</span>
+                  <span class="line"></span>
+              </div>
+          </div>
+      </div>
 
-      <mat-form-field class="full-width">
-        <input matInput placeholder="Customer email" type="email" name="email" id="email" formControlName="email" [class]="isValid('email')" required>
-      </mat-form-field>
-    
-      <mat-form-field class="full-width">
-        <input matInput placeholder="Postal Code" name="postalCode" id="postalCode" formControlName="postalCode" [class]="isValid('postalCode')" required>
-      </mat-form-field>    
-     
-      <mat-form-field class="full-width">
-        <input matInput placeholder="Customer Address" name="address" id="address" formControlName="address" [class]="isValid('address')" required>
-      </mat-form-field>
+      <div class="row100">
+          <div class="col">
+              <div class="inputBox">
+                  <input placeholder="Customer email" type="email" name="email" id="email" formControlName="email" [class]="isValid('email')" required>
+                  <span class="text">Email</span>
+                  <span class="line"></span>
+              </div>
+          </div>
 
-      <mat-form-field class="third-width">
-        <input matInput placeholder="Image URL (enter image URL)" type="url" name="url" id="url" formControlName="url" [class]="isValid('url')" required>
-      </mat-form-field>
+          <div class="col">
+              <div class="inputBox">
+                  <input placeholder="Postal Code" name="postalCode" id="postalCode" formControlName="postalCode" [class]="isValid('postalCode')" required>
+                  <span class="text">Postal Code</span>
+                  <span class="line"></span>
+              </div>
+          </div>
+      </div>
 
-      <mat-form-field class="full-width">
-        <textarea matInput placeholder="Customer Notes" name="notes" id="notes" rows="5" formControlName="notes"></textarea>
-      </mat-form-field>
-      
-      <hr>
+      <div class="row100">
+          <div class="col">
+              <div class="inputBox">
+                  <input placeholder="Customer Address" name="address" id="address" formControlName="address" [class]="isValid('address')" required>
+                  <span class="text">Address</span>
+                  <span class="line"></span>
+              </div>
+          </div>
 
-      <!-- <button style="margin-right: 30px" mat-raised-button color="warn" (click)="updateCustomer()" value="updateCustomer">
-        Update Customer
-      </button> -->
+          <div class="col">
+              <div class="inputBox">
+                  <input placeholder="Job" name="job" id="job" formControlName="job" [class]="isValid('job')" required>
+                  <span class="text">Job</span>
+                  <span class="line"></span>
+              </div>
+          </div>
+      </div>
 
-      <button class="a" value="updateCustomer" (click)="updateCustomer()">Update Customer</button>
+      <div class="row100">
+          <div class="col">
+              <div class="inputBox">
+                  <input placeholder="Image URL (enter image URL)" type="url" name="url" id="url" formControlName="url" [class]="isValid('url')" required>
+                  <span class="text">Image URL</span>
+                  <span class="line"></span>
+              </div>
+          </div>
 
-      <br><br>
-    
-    </form>
-</div>
+          <div class="col">
+              <div class="inputBox textarea">
+                  <textarea matInput placeholder="Customer Notes" name="notes" id="notes" rows="5" formControlName="notes"></textarea>
+                  <span class="text">Notas ...</span>
+                  <span class="line"></span>
+              </div>
+          </div>
+      </div>
+
+      <div class="row100">
+          <div class="col">
+              <input type="submit" value="updateCustomer" (click)="updateCustomer()">
+          </div>
+      </div>
+  </form>
+</section>

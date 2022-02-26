@@ -12,6 +12,11 @@
 		
 		<ng-template #GoButton>
 			<a id="superBtn" routerLink='/login'>Login !</a>
+			
+			<audio id="audio">
+				<source src="../../../assets/altair-audio.mp3" type="audio/mp3">
+			</audio>
+			<a id="superBtn" class="playPauseBtn" onclick="playPause()">Play &#9658;</a>
 		</ng-template>
 		
 		<img src="../../../assets/altair-derecha.png" id="mountains_front">
@@ -20,9 +25,9 @@
 	<div class="sec" id="sec">
 		<h2>Hola Lector. Bienvedido de nuevo.</h2>
 		<br>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error pariatur itaque culpa ullam esse cumque. Consequatur velit aliquid laborum expedita adipisci sed distinctio temporibus minima, quae optio vitae obcaecati! Hic officiis labore recusandae! Est in illo veniam vel quisquam error vitae eveniet? Reprehenderit aut dignissimos libero harum natus architecto, ipsum incidunt doloremque dolores, similique in porro pariatur! Beatae, provident soluta, possimus a in perferendis ad, ratione necessitatibus quia quam obcaecati repudiandae fugit quo nobis animi dolore vel error. Ab eaque ex nulla, dignissimos sapiente corporis blanditiis corrupti quis, impedit itaque odio facilis earum fuga commodi totam! Accusamus, deleniti? Tempore, qui!</p>
+		<p>Partiendo de la base del proyecto de la Biblioteca que realicé en los meses anteriores, he desarrollado esta segunda versión como proyecto final para la asignatura de Angular en mi Grado Superior de Desarrollo de Aplicaciones Web.<br>En esta segunda versión, la mayoría de los cambios que he realizado son de frontend, es decir, puramente diseño.<br>Aunque antes de nada, me gustaría comentarte un poco sobre el instituto en el que estoy ahora, el cual me ha brindado la gran oportunidad de haber podido aprender y experimentar sobre el gran framework de Angular (sobre el cual está desarrollado este proyecto, y todos aquellos que puedas encontrar en mi GitHub con el nombre de "Angular-School-Project").</p>
 		<br>
-		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic et odio aliquid quod, amet perspiciatis dolor, laborum molestias inventore, soluta mollitia. Corrupti, vitae dolorum. Odit in sequi autem eveniet. Hic, tenetur! Fugit in nobis aspernatur quibusdam quia. Quia nesciunt neque necessitatibus ad assumenda! Alias omnis facere dolore est, aut expedita laborum iste id quasi quidem et consequuntur. Ullam officiis voluptas culpa, recusandae enim quod deleniti similique ut dolor sunt iusto amet eaque, fugiat aut. Quisquam unde odit deserunt molestias ullam quasi aliquam. Aliquid vel porro repudiandae temporibus ullam! Expedita aperiam labore velit deleniti officiis unde error ipsam cumque fuga molestiae?</p>
+		<p>Altair es un centro de educación diferenciada, concertado en todos los niveles educativos: Infantil, Primaria, ESO, Bachillerato y Formación Profesional.<br>Ofrece una educación integral: humana, científica, cultural, religiosa y deportiva.<br>Su proyecto educativo se refiere a todos los aspectos de la persona y está inspirado en una visión cristiana de la vida, en un clima de libertad y de responsabilidad personal.<br>A lo largo de toda su historia, han pasado por el centro más de diez mil alumnos, que junto a sus familias han confiado en él con la misma fe que lo hicieron los primeros en aquel lejano año 1967, año en el que se matricularon los primeros alumnos.<br> En estos cincuenta años se han formado en sus aulas miles de jóvenes y también sus padres. Son cientos los antiguos alumnos que han regresado a Altair para matricular a sus hijos; y ya empiezan a aparecer los nietos. Este acontecimiento se debe a la mutua atracción y a la indisoluble relación de Altair con sus barrios.</p>
 	</div>
 </div>
 
@@ -39,9 +44,21 @@
 <div class="sec" id="sec">
 	<h2>Constancia, dedicación, y mucha ilusión.</h2>
 	<br>
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error pariatur itaque culpa ullam esse cumque. Consequatur velit aliquid laborum expedita adipisci sed distinctio temporibus minima, quae optio vitae obcaecati! Hic officiis labore recusandae! Est in illo veniam vel quisquam error vitae eveniet? Reprehenderit aut dignissimos libero harum natus architecto, ipsum incidunt doloremque dolores, similique in porro pariatur! Beatae, provident soluta, possimus a in perferendis ad, ratione necessitatibus quia quam obcaecati repudiandae fugit quo nobis animi dolore vel error. Ab eaque ex nulla, dignissimos sapiente corporis blanditiis corrupti quis, impedit itaque odio facilis earum fuga commodi totam! Accusamus, deleniti? Tempore, qui!</p>
-	<br>
-	<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic et odio aliquid quod, amet perspiciatis dolor, laborum molestias inventore, soluta mollitia. Corrupti, vitae dolorum. Odit in sequi autem eveniet. Hic, tenetur! Fugit in nobis aspernatur quibusdam quia. Quia nesciunt neque necessitatibus ad assumenda! Alias omnis facere dolore est, aut expedita laborum iste id quasi quidem et consequuntur. Ullam officiis voluptas culpa, recusandae enim quod deleniti similique ut dolor sunt iusto amet eaque, fugiat aut. Quisquam unde odit deserunt molestias ullam quasi aliquam. Aliquid vel porro repudiandae temporibus ullam! Expedita aperiam labore velit deleniti officiis unde error ipsam cumque fuga molestiae?</p>
+	<p>
+		Como te venía contando al principio, las principales novedades de esta nueva versión saltan a la vista por sí solas.<br> Pero aún así, quisiera hacerte un pequeño resumen para que no se te escape ningún detalle.
+		<br>
+		Todos los componentes (menos el Customer-List) han sido rediseñados completamente, habiendo prescindido así del uso de Angular Material, para brindarte a ti, mi querido usuario, los mejores diseños y efectos que he podido encontrar, usando para ello la mejor combinación de CSS y JS ... sí sí, lo has leído bien, JAVASCRIPT, y te invito gustosamente a que descubras en mi GitHub la fórmula que me permitió importar y usar JS en TS !
+		<br><br>
+		<b>Home</b>: Empieza con un efecto Parallax, con imágenes que he recortado de una foto que hice en el patio central del instituto (el botón de Play es para contarte por audio qué es Altair). Después le sigue una imagen de la administración del Altair, la cual tiene debajo otra imagen con un contorno inferior semicircular, que acompañada de un poco de JS, obtiene un efecto de Scroll Transform con lo que parece que se va plegando y recogiendo sobre sí misma a medida que avanza el scroll down. Y al final de este Home, podrás encontrar un pequeño efecto para libros con el cual puedes ver, además de la portada del libro, su lomo y su contraportada jugando con los ángulos y giros de perpectiva de 95  y 180 grados.
+		<br>
+		<b>Book-List</b>: Posiblemente uno de mis efectos favoritos. Por más que pasen los años, la gran librería de Vanilla-Tilt vuelve a causar sensación en todos sus espectadores con su increíble efecto de 3D para las típicas "cards" (aunque puede aplicarse a cualquier div).
+		<br>
+		<b>Book-Details</b>: Su antigua estructura ha sido reemplazada por una gran "card", la cual revela los detalles del libro sólo cuando mantenemos el cursor encima la carta (es un efecto basado en "hover" con una transición que rellena de color toda la carta, gracias a la propiedad ClipPath de CSS). Debajo de los posibles detalles del libro, podemos navegar hacia otros componentes a través de los botones ... que se rellenan de color neón al poner el cursor encima !
+		<br>
+		<b>AddBook & EditBook</b>: Desde mi experiencia y opinión personal, el mejor CSS para formularios de todo 2021 (y si me apuras, hasta la fecha de hoy también sigue siendo el mejor). Su efecto para desplegar hacia arriba el background de los inputs es algo sin precedenetes. Incluso su técnica de codificado en CSS deja sorprendido a más de algún programador senior ...
+		<br>
+		<b>Bookings-List</b>: Al igual que el formulario del que veníamos hablando, esta lista también tiene su diseño basado en la temática más popular que hubo en 2021 ... la temática "Glassmorphism". Una vez más, combinando el glassmorphism con un fondo oscuro y una fuente de letra clara, acompañado de un efecto "hover", conseguimos esta gran sutileza futurística, esta vez, en una lista.
+	</p>
 </div>
 
 <div class="body3">
@@ -68,4 +85,22 @@
 			<img src="https://blogger.googleusercontent.com/img/a/AVvXsEgUlQ8_nRbQYG6o1TbamRTTogj5ogwPwc3YIyPAI9bBDYcl-P1tA7u3FoYhXxK-iFsrga69DaGrnXTR0eUNUVvyfpkrVuYh_g-UiHmim5Fb17HgstgEmdme76NKkg8Ko3UKCnvQQn9nRzz9UoVBbCsTJ_wuU_5VqMA_0V4RScQLAzfY3PTMuYpiAiLG=w204-h320" alt="">
 		</div>
 	</section>
+</div>
+
+<div class="sec" id="sec">
+	<h2>Por mí y por todos mis compañeros</h2>
+	<br>
+	<p>
+		Al igual que cuando era niño y llegaba a la meta ... pero ahora de adulto, quisiera volver a decirlo.
+		<br>
+		¡ Por mí y por todos mis compañeros !
+		<br><br>
+		Me gustaría dedicar este proyecto a todos mis compañeros de segundo, los cuales han creído ciegamente en mí cada día en esta asignatura.
+		<br>
+		Porque conseguir una nota es fácil. Lo difícil es ganarte el respeto, el reconocimiento ... y lo más valioso de todo, la amistad.
+		<br>
+		Estoy seguro de que vais a realizar unas prácticas increíbles, y os deseo los mejores éxitos profesionales.
+		<br>
+		Nunca dejéis de soñar, ni de creer en vosotros mismos. Espero que volvamos a reencontrarnos en un futuro. Os quiero chavales!
+	</p>
 </div>

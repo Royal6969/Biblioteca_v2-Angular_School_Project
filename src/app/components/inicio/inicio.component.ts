@@ -22,6 +22,7 @@ export class InicioComponent implements OnInit {
   ngOnInit(): void {
     this.effectLoaderService.cargarEfecto(['inicio-parallax']);
     this.effectLoaderService.cargarEfecto(['scroll-circle']);
+    this.effectLoaderService.cargarEfecto(['play&pause']);
   }
 
   goToBookList(){

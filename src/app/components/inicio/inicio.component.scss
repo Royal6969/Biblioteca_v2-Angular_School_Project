@@ -79,6 +79,8 @@
     z-index: 9;
     transform: translateY(100px);
     cursor: pointer;
+    margin-left: -20px;
+    margin-right: 40px;
 }
 
 .sec {
@@ -97,7 +99,6 @@
     font-size: 1em;
     color: var(--text-color);
 }
-
 
 /*********** Non-Rectangular Header - Circle scroll tranform ************/
 .body2 {

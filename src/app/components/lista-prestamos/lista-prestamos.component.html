@@ -9,13 +9,13 @@
     <div class="box">
       <h3>Lista de Préstamos</h3>
       
-      <div class="list" *ngFor="let prestamo of prestamos">
+      <div class="list" *ngFor="let prestamo of prestamos; let indice = index">
         <div class="imgBx">
           <img src="{{prestamo.data.customer_url}}">
         </div>
 
         <div class="content">
-          <h2 class="rank"><small>#</small>1</h2>
+          <h2 class="rank"><small>#</small>{{ indice + 1 }}</h2>
           <h4>{{prestamo.data.customer_name}}</h4>
           <p>{{prestamo.data.customer_email}}</p>
         </div>

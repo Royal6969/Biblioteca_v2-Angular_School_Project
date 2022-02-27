@@ -6,7 +6,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     display: none; /* se oculta y se activa con el js */
-    z-index: 99;
+    z-index: 999999;
 }
 
 .contentBox{

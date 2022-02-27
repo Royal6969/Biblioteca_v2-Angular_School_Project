@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { EffectLoaderService } from './services/effect-loader.service';
 
 @Component({
   selector: 'app-root',
@@ -6,8 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit{
   
   title = 'books';
+
+  constructor(
+    private effectLoaderService: EffectLoaderService
+  ) { }
+
+  ngOnInit(): void {
+    this.effectLoaderService.cargarEfecto(['popUp']);
+  }
 
 }

@@ -6,7 +6,7 @@ const popup = document.querySelector('.popup');
                 popup.style.display = "block"; //lo bloqueamos para que no salga al principio del tirón
 
                 //Add some time delay to show popup  
-            }, 90000)
+            }, 150000)
         }
 
         close.addEventListener('click', () => {

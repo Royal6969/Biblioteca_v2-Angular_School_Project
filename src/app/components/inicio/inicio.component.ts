@@ -23,7 +23,6 @@ export class InicioComponent implements OnInit {
     this.effectLoaderService.cargarEfecto(['inicio-parallax']);
     this.effectLoaderService.cargarEfecto(['scroll-circle']);
     this.effectLoaderService.cargarEfecto(['play&pause']);
-    this.effectLoaderService.cargarEfecto(['popUp']);
   }
 
   goToBookList(){
